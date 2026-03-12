@@ -1,0 +1,56 @@
+# ── Data Source Configuration ──────────────────────────────────
+# Edit these paths and settings as needed
+
+pubchem:
+  base_url: "https://pubchem.ncbi.nlm.nih.gov/rest/pug"
+  timeout: 15
+  retry_attempts: 3
+  output_dir: "data/raw/pubchem"
+
+openfda:
+  base_url: "https://api.fda.gov/drug/event.json"
+  timeout: 15
+  retry_attempts: 3
+  default_limit: 100
+  output_dir: "data/raw/openfda"
+
+drugbank:
+  base_url: "https://api.drugbank.com/v1"
+  timeout: 20
+  retry_attempts: 3
+  output_dir: "data/raw/drugbank"
+
+sider:
+  download_url: "http://sideeffects.embl.de/media/download"
+  output_dir: "data/raw/sider"
+
+# ── Processing Settings ─────────────────────────────────────────
+processing:
+  min_drugs_per_interaction: 2
+  max_drugs_per_interaction: 10
+  train_test_split: 0.2
+  validation_split: 0.1
+  random_seed: 42
+
+# ── Starter Drug List ───────────────────────────────────────────
+starter_drugs:
+  - aspirin
+  - warfarin
+  - ibuprofen
+  - metformin
+  - lisinopril
+  - atorvastatin
+  - amlodipine
+  - omeprazole
+  - simvastatin
+  - clopidogrel
+  - metoprolol
+  - losartan
+  - gabapentin
+  - sertraline
+  - fluoxetine
+  - amoxicillin
+  - ciprofloxacin
+  - prednisone
+  - furosemide
+  - digoxin

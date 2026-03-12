@@ -1,0 +1,28 @@
+# ── Feature Engineering Configuration ──────────────────────────
+
+molecular:
+  morgan_radius: 2
+  morgan_bits: 2048
+  maccs_bits: 167
+  use_morgan: true
+  use_maccs: true
+  pair_combination_method: concat   # concat | diff | hadamard
+
+biological:
+  use_enzyme_features: true
+  use_target_features: true
+  use_pathway_features: false       # Requires DrugBank paid API
+
+clinical:
+  use_fda_reports: true
+  min_report_count: 5               # Ignore drugs with fewer than N reports
+  use_severity_score: true
+
+graph:
+  node_feature_dim: 74              # Atom feature dimension
+  edge_feature_dim: 12              # Bond feature dimension
+  use_edge_features: true
+
+fusion:
+  method: concatenation             # concatenation | attention | weighted_sum
+  normalize_features: true

@@ -1,0 +1,45 @@
+# Environment
+.env
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Data (too large for git — use Git LFS or DVC if needed)
+data/raw/*
+data/processed/*
+data/interim/*
+data/external/*
+!data/**/.gitkeep
+
+# Saved models
+models/baseline/*
+models/advanced/*
+models/metadata/*
+!models/**/.gitkeep
+
+# Results
+results/
+
+# Streamlit assets generated at runtime
+streamlit_app/assets/*.png
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/

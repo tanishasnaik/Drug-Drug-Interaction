@@ -1,0 +1,47 @@
+# ── Model Hyperparameters ───────────────────────────────────────
+
+logistic_regression:
+  C: 1.0
+  max_iter: 1000
+  solver: lbfgs
+  random_state: 42
+
+random_forest:
+  n_estimators: 100
+  max_depth: 10
+  min_samples_split: 5
+  min_samples_leaf: 2
+  n_jobs: -1
+  random_state: 42
+
+xgboost:
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+  eval_metric: logloss
+  random_state: 42
+
+gnn:
+  hidden_channels: 64
+  num_layers: 3
+  dropout: 0.2
+  learning_rate: 0.001
+  epochs: 100
+  batch_size: 32
+
+# ── Training Settings ───────────────────────────────────────────
+training:
+  cross_validation_folds: 5
+  early_stopping_patience: 10
+  save_best_only: true
+  model_save_dir: "models/"
+
+# ── Severity Thresholds ─────────────────────────────────────────
+severity:
+  minor: [0.0, 0.2]
+  moderate: [0.2, 0.4]
+  major: [0.4, 0.6]
+  severe: [0.6, 0.8]
+  contraindicated: [0.8, 1.0]

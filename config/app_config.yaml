@@ -1,0 +1,31 @@
+# ── Streamlit App Configuration ────────────────────────────────
+
+app:
+  title: "Drug Interaction Prediction System"
+  icon: "💊"
+  layout: wide
+  theme: light
+
+pages:
+  - name: "Input Medications"
+    icon: "💊"
+  - name: "Risk Dashboard"
+    icon: "📊"
+  - name: "Interaction Details"
+    icon: "🔬"
+  - name: "Batch Analysis"
+    icon: "📋"
+  - name: "Model Comparison"
+    icon: "📈"
+
+model:
+  default_model: xgboost            # Model to use for predictions
+  model_path: "models/baseline/xgboost.pkl"
+  feature_names_path: "models/metadata/feature_names.json"
+
+display:
+  max_drugs_input: 10
+  show_molecule_viewer: true
+  show_shap_plots: true
+  show_raw_features: false
+  heatmap_colorscale: RdYlGn_r      # Red=high risk, Green=low risk
